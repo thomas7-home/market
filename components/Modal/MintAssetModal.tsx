@@ -49,9 +49,9 @@ export const MintAssetModal = (): JSX.Element => {
   const possibleMintAmount =
     maxSupply === 0 ? Infinity : maxSupply - issuedSupply;
   const maxMintAmountForSession =
-    possibleMintAmount < 50 ? possibleMintAmount : 50;
+    possibleMintAmount < 1000 ? possibleMintAmount : 1000;
   const maxMintMessage = `${maxMintAmountForSession} max${
-    maxMintAmountForSession === 50 ? ' per session' : ''
+    maxMintAmountForSession === 1000 ? ' per session' : ''
   }`;
 
   useEffect(() => {

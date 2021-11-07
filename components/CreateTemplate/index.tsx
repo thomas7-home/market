@@ -123,7 +123,7 @@ const CreateTemplate: FC<{
     let valid = false;
     let errorMessage;
 
-    if (number >= 1 && number <= 50) {
+    if (number >= 1 && number <= 1000) {
       if (parseInt(maxSupply) > 0) {
         if (number <= parseInt(maxSupply)) {
           valid = true;
@@ -134,7 +134,7 @@ const CreateTemplate: FC<{
         valid = true;
       }
     } else {
-      errorMessage = 'You can mint up to 50 assets at a time';
+      errorMessage = 'You can mint up to 1000 assets at a time';
     }
 
     setIsValid(valid);
